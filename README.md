@@ -1,5 +1,8 @@
 # Word2Note - Lyrics to MIDI Generator
 
+## [Project Structure](/Documents/README.md)  
+## [Results](/MIDI_Results/README.md)
+
 ## About This Project
 
 In this project we aim to try and implement a generative recurrent model with the goal of generating a genre
@@ -20,5 +23,3 @@ The Model Notebook is the model itself. You should change the path of the datase
 The Midi_Generator is used to convert the output of the model into MIDI files. You can change the tempo and other technical musical parameters in order to refine the output.  
 The sentences provided to the Midi_Generator must be gramatically correct, and therefore has post-processing methods included (First note and Majority note).
 
-[Project Structure](/Documents/README.md)
-[Results](/MIDI_Results/README.md)
