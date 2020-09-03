@@ -109,7 +109,7 @@ Majority Note Smoothing:<br>
 
 ### Hallelujah - Leonard Cohen
 
-Lyrics: _"i'd heard there was a secret chord that david played and it pleased the lord but you don't really care for music do you"
+Lyrics: _"i'd heard there was a secret chord that david played and it pleased the lord but you don't really care for music do you"_
 
 Prediction:
 ```

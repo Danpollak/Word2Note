@@ -1,4 +1,4 @@
-# Word2Note - Lyrics to MIDI Generator
+# Word2Note - Lyrics to Melody Generator
 
 ## [Project Structure](/Documents/README.md)  
 ## [Results](/MIDI_Results/README.md)

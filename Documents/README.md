@@ -44,14 +44,15 @@ In order to solve these sub-problems we intend to take the following steps:
 In our project we use the DALI [[MBCHP18]](#MBCHP18) dataset, this dataset contains hierarchial and vertical information
 about each sub component of the song lyrics and melody (notes).
 
-![](fig1.jpeg)
-```
-Figure 1: Each paragraph is divided to lines and each lines to words and each line to notes
-```
-![](fig2.jpeg)
-```
+![](fig1.jpeg)<br>
+<sub>
+Figure 1: Each paragraph is divided to lines and each lines to words and each line to notes</sub>
+
+![](fig2.jpeg)<br>
+<sub>
 Figure 2: At each point we know to which component in the hierarchy each sub component belongs to
-```
+</sub>
+
 From this dataset we are able to extract for each character in the lyrics its associated note and the word
 that it is part of.
 We also added additional vocabulary wise markers for spaces and starting notes (i.e for a start of A4 a tag
@@ -86,10 +87,11 @@ Let us detail our the progress on our project:
 - Changing the LSTM latent hidden layer size, the sizes of the batches or training for more epochs
     didn’t change the results.
 
-![](fig3.png)
-```
+![](fig3.png)<br>
+<sub>
 Figure 3: our initial model, a simple sequence to sequence based architecture
-```
+</sub>
+
 2. To improve upon our previous model and inject additional semantic information we introduced an
     additional word level embedding layer to our architecture:
        - Instead having our feature sentence be composed of character indexes we concatenated to each
@@ -98,11 +100,12 @@ Figure 3: our initial model, a simple sequence to sequence based architecture
           learn the start note structure consistently.
 
 
-![](fig4.png)
-```
+![](fig4.png)<br>
+<sub>
 Figure 4: We added the additional word level input and an embedding layer for this input and then con-
 catenated it with our raw character level input
-```
+</sub>
+
 3. When This didn’t give us the improvement we desired we decided to convert the encoder LSTM into
     a bidirectional LSTM:
        - We hoped that by taking into account both logical directions would allow the network to learn
@@ -123,16 +126,18 @@ catenated it with our raw character level input
 - This addition slightly improved our training accuracy but are model still failed on both validation
     and test set.
 
-![](fig5.png)
-```
+![](fig5.png)<br>
+<sub>
 Figure 5: Our final model, Fully bidirectional with both Word level and character level embedding
-```
+</sub>
+
 The following graph shows our final training results:
 
-![](fig6.jpeg)
-```
+![](fig6.jpeg)<br>
+<sub>
 Figure 6: While Our model was able to learn the distribution of the training data it failed to generalize it
-```
+</sub>
+
 However after some additional thought we decided to devise a new metrics to measure our model on
 because several tunes and melody can be devised for a given lyrics thereby making accuracy not a good
 enough measurement of our model success or failure.
